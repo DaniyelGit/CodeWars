@@ -34,3 +34,33 @@ const removeStringSpaces = (str) => {
 };
 
 console.log(removeStringSpaces(string));
+
+
+// ----------------------------- ***Count sheep in array*** -----------------------------
+
+const arrayOfSheep = [true, true, true, false,
+	true, true, true, true,
+	true, false, true, false,
+	true, false, false, true,
+	true, true, true, true,
+	false, false, true, true, true, true];
+
+const countSheepInArr = (arr) => {
+	// let result = 0;
+	// for (let i = 0; i < arr.length; i++) {
+	// 	if (arr[i]) {
+	// 		result = result + 1;
+	// 	}
+	// }
+	// return result;
+
+	// let result = arr.reduce((prev, item) => {
+	// 	return item === true ? prev + 1 : prev;
+	// }, 0);
+
+	// return result;
+
+	return arr.filter(s => s).length;
+};
+
+console.log(countSheepInArr(arrayOfSheep));
