@@ -64,3 +64,17 @@ const countSheepInArr = (arr) => {
 };
 
 console.log(countSheepInArr(arrayOfSheep));
+
+
+// ---------------- ***We need a function that can transform a number into a string.*** -------------------
+
+const number = 67;
+
+function numberToString(num) {
+	return String(num);
+	// return num + '';
+	// return num.toString();
+
+}
+
+console.log(numberToString(number));
