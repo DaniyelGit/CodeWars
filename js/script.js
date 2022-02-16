@@ -1,7 +1,7 @@
 'use strict';
 
 
-// Given an array of integers your solution should find the smallest integer.
+// ----------------- ***Given an array of integers your solution should find the smallest integer.*** ----------
 
 const arr = [-5, 78, 56, 1, 232, 12, 8, -10];
 
@@ -22,3 +22,15 @@ const fingMinValueInArr = (args) => {
 };
 
 console.log(fingMinValueInArr(arr));
+
+
+//  ----------------------------------- ***Remove String Spaces*** --------------------------------
+
+const string = '8 j 8   mBliB8g  imjB8B8   jl  B';
+
+const removeStringSpaces = (str) => {
+	// return str.split(' ').join('');
+	return str.replace(/\s/g, '');
+};
+
+console.log(removeStringSpaces(string));
