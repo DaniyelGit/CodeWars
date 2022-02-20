@@ -129,3 +129,22 @@ const findCountVowels = str => {
 }
 
 console.log(findCountVowels(strForVowels))
+
+// -------------------------------***Разбить верблюжий регистр***------------------------------------------
+
+const str = 'camelCaseItem'
+const str1 = 'camelcase'
+
+const breakCamelCase = string => {
+	let result = ''
+	for (let char of string) {
+		if (char === char.toUpperCase()) {
+			result += ' ' + char
+		} else {
+			result += char
+		}
+	}
+	return result
+}
+
+console.log(breakCamelCase(str1))
