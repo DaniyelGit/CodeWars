@@ -148,3 +148,18 @@ const breakCamelCase = string => {
 }
 
 console.log(breakCamelCase(str1))
+
+// -----------------------------------------***Возвести каждое число в квадрат***-----------------------------------------
+
+const value = 32321
+
+const squareDigits = num => {
+	const result = String(num)
+		.split('')
+		.map(n => (+n) ** 2)
+		.join('')
+
+	return +result
+}
+
+console.log(squareDigits(value))
