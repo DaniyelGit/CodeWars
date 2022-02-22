@@ -163,3 +163,23 @@ const squareDigits = num => {
 }
 
 console.log(squareDigits(value))
+
+const solve = s => {
+	let prev = 0
+	let max = 0
+
+	for (let i = 0; i < s.length; i++) {
+		if ('aeiou'.includes(s[i])) {
+			prev++
+			if (prev > max) {
+				max = prev
+			}
+		} else {
+			prev = 0
+		}
+	}
+
+	return max
+}
+
+console.log(solve('ultrarevolutionariees'))
