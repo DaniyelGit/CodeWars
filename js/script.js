@@ -164,6 +164,8 @@ const squareDigits = num => {
 
 console.log(squareDigits(value))
 
+// ----------------------------------------***Найти число гласных букв подряд***----------------------
+
 const solve = s => {
 	let prev = 0
 	let max = 0
