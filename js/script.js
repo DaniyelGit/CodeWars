@@ -185,3 +185,17 @@ const solve = s => {
 }
 
 console.log(solve('ultrarevolutionariees'))
+
+// ----------------------------------------***Найти и удалить гласные в строке***----------------------
+
+const removeVowels = str => {
+	let vowel = ['a', 'e', 'i', 'o', 'u']
+
+	let arr = str.split('')
+
+	let result = arr.filter(v => !vowel.includes(v)).join('')
+
+	return result
+}
+
+console.log(removeVowels('This website is for losers LOL!'))
