@@ -205,3 +205,34 @@ const removeVowelsReg = str => {
 }
 
 console.log(removeVowelsReg('This website is for losers LOL!'))
+
+// ----------------------------------------***Вернуть наибольшее и наименьшее число***----------------------
+
+// const highAndLow = numbers => {
+// 	let arr = numbers.split(' ').map(Number)
+
+// 	let min = arr[0]
+// 	let max = arr[0]
+
+// 	for (let i = 0; i < arr.length; i++) {
+// 		if (arr[i] > max) {
+// 			max = arr[i]
+// 		}
+// 		if (arr[i] < min) {
+// 			min = arr[i]
+// 		}
+// 	}
+
+// 	return `${min} ${max}`
+// }
+
+// console.log(highAndLow('1 2 -3 4 5'))
+
+const highAndLow = numbers => {
+	let arr = numbers.split(' ').map(Number)
+
+	return Math.min(...arr) + ' ' + Math.max(...arr)
+	// return Math.min.apply(0, arr) + ' ' + Math.max.apply(0, arr)
+}
+
+console.log(highAndLow('1 2 -3 4 5'))
