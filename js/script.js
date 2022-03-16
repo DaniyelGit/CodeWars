@@ -253,3 +253,13 @@ const descendingOrder = n => {
 }
 
 console.log(descendingOrder(1201));
+
+
+// ----------------------------------------***  ***----------------------
+
+function accum(s) {
+	// debugger;
+	return [...s].map((item, index) => (item.toUpperCase() + item.toLowerCase().repeat(index))).join('-');
+}
+
+console.log(accum('acbdf'));
