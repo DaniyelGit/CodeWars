@@ -252,14 +252,31 @@ const descendingOrder = n => {
 
 }
 
-console.log(descendingOrder(1201));
+// console.log(descendingOrder(1201));
 
 
-// ----------------------------------------***  ***----------------------
+// ----------------------------------------*** Mumbling ***----------------------
 
 function accum(s) {
-	// debugger;
 	return [...s].map((item, index) => (item.toUpperCase() + item.toLowerCase().repeat(index))).join('-');
 }
 
-console.log(accum('acbdf'));
+// console.log(accum('acbdf'));
+
+
+// ------------------------------------*** Get the Middle Character (найти середину строки) ***
+
+const getMiddle = (string) => {
+		const lengthStr = string.length;
+		const middleStr = Math.floor(lengthStr/2);
+
+		if (lengthStr % 2 === 0) {
+			return string[middleStr - 1] + string[middleStr]
+		}
+		else {
+			return string[middleStr];
+		}
+}
+
+console.log(getMiddle('test'));
+console.log(getMiddle('preloader'));
