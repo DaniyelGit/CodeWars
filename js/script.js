@@ -280,3 +280,51 @@ const getMiddle = (string) => {
 
 console.log(getMiddle('test'));
 console.log(getMiddle('preloader'));
+
+
+// 
+
+
+// ------------------------------------*** Задача №44 функция принимает целое число и возводит в квадрат каждую цифру числа ***-------------
+
+/* function squareDigits(num) {
+  num = String(num).split('');
+  
+  return +num.map(item => item ** 2).join('');
+} */
+
+
+/* function squareDigits(num) {
+  num = String(num).split('');
+  
+  return +num.reduce((accum, item) => {
+    accum += Math.pow(item, 2); // или item ** 2
+    return accum;
+  }, '');
+} */
+
+
+// console.log(squareDigits(9119));
+
+
+// ---------*** Задача №45 написать функцию, которая возвращает новую отсортированную (по порядку) строку, которая содержит буквы двух строк, повторяющихся только один раз. ***-------------
+
+/* function longest(str1, str2) {
+  let concatStr = [...str1, ...str2];
+  let result = [];
+  concatStr.forEach(item => !result.includes(item) && result.push(item));
+  return result.sort().join('');
+} */
+
+
+/* function longest(str1, str2) {
+  let concatStr = [...str1, ...str2];
+  return concatStr.reduce((accum, item) => {
+    if (!accum.includes(item)) {
+      accum.push(item)
+    }
+    return accum;
+  }, []).sort().join('');
+} */
+
+// console.log(longest('xyaabbbccccdefww', 'xxxxyyyyabklmopq'));
