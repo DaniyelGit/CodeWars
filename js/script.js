@@ -310,21 +310,38 @@ console.log(getMiddle('preloader'));
 // ---------*** Задача №45 написать функцию, которая возвращает новую отсортированную (по порядку) строку, которая содержит буквы двух строк, повторяющихся только один раз. ***-------------
 
 /* function longest(str1, str2) {
-  let concatStr = [...str1, ...str2];
-  let result = [];
-  concatStr.forEach(item => !result.includes(item) && result.push(item));
-  return result.sort().join('');
+  	let concatStr = [...str1, ...str2];
+  	let result = [];
+  	concatStr.forEach(item => !result.includes(item) && result.push(item));
+  	return result.sort().join('');
 } */
 
 
 /* function longest(str1, str2) {
-  let concatStr = [...str1, ...str2];
-  return concatStr.reduce((accum, item) => {
-    if (!accum.includes(item)) {
-      accum.push(item)
-    }
-    return accum;
+  	let concatStr = [...str1, ...str2];
+  	return concatStr.reduce((accum, item) => {
+    	if (!accum.includes(item)) {
+      	accum.push(item)
+    	}
+    	return accum;
   }, []).sort().join('');
 } */
 
 // console.log(longest('xyaabbbccccdefww', 'xxxxyyyyabklmopq'));
+
+
+// ---------*** Задача №42 Дан массив слов, необходимо определить, составлены ли все слова из одних и тех же символов. Функци/ реализовать как принимающую переменное число аргументов. ***-------------
+
+
+// let array = ["кот", "ток", "кто"];
+// array = ["кот", "тк", "кТо"];
+// array = ["кит", "кИт", "кит"]
+
+const checkWords = arr => {
+	let sortArr = arr.map(item => item.split('').sort().join(''));
+	let testWord = sortArr[0];
+	return sortArr.map(item => item === testWord).every(item => item);
+
+}
+
+console.log(checkWords(array));
