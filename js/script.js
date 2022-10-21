@@ -345,3 +345,89 @@ console.log(getMiddle('preloader'));
 } */
 
 // console.log(checkWords(array));
+
+
+
+
+// ************** Задача №45 написать функцию, которая возвращает новую отсортированную (по порядку) строку, которая содержит буквы двух строк, повторяющихся только один раз. *******************
+
+/* function longest(str1, str2) {
+  let concatStr = [...str1, ...str2];
+  let result = [];
+  concatStr.forEach(item => !result.includes(item) && result.push(item));
+  return result.sort().join('');
+} */
+
+
+/* function longest(str1, str2) {
+  let concatStr = [...str1, ...str2];
+  return concatStr.reduce((accum, item) => {
+    if (!accum.includes(item)) {
+      accum.push(item)
+    }
+    return accum;
+  }, []).sort().join('');
+} */
+
+// console.log(longest('xyaabbbccccdefww', 'xxxxyyyyabklmopq'));
+
+
+// ************** Задача №46 Вернуть число оставшихся пассажиров в автобусе после последней остановки [[3 - вошли, 0 - вышли], [9, 1]]***
+
+// let array = [[3, 0], [9, 1], [4, 10], [12, 2], [6, 1], [7, 10]];
+
+/* function busStops(arr) {
+  let result = arr.reduce((accum, item) => {
+    accum[0] += item[0];
+    accum[1] += item[1];
+    return accum;
+  }, [0, 0]);
+
+  return result[0] - result[1];
+} */
+
+// console.log(busStops(array));
+
+
+// ***************** Задача №47 анаграмм ***************
+
+/* function anagrams(str, arr) {
+  return arr.filter(item => item.split('').sort().join('') === str.split('').sort().join(''))
+}
+
+
+console.log(anagrams('abba', ['aabb', 'abcd', 'bbaa', 'dada']));
+ */
+
+
+// **************** Задача №48 система лайков facebook. Вернуть строку с именами, которым  нравится элемент **************
+
+/* function likes(arr) {
+  if (arr.length === 0) {
+    return `no one likes this`;
+  }
+  else if (arr.length === 1) {
+    return `${arr.join('')} likes this`;
+  }
+  else if (arr.length === 2) {
+    return `${arr.join(' and ')} like this`;
+  }
+  else if (arr.length === 3) {
+    return `${arr.slice(0, 2).join(', ')} and ${arr.at(-1)} like this`;
+  }
+  else {
+    return `${arr.slice(0, 2).join(', ')} and ${arr.slice(2).length} others like this`;
+  }
+} */
+
+
+// console.log(likes([]));
+// console.log(likes(['Max']));
+// console.log(likes(['Max', 'John']));
+// console.log(likes(['Max', 'John', 'Mark']));
+// console.log(likes(['Max', 'John', 'Mark', 'Daniyel']));
+// console.log(likes(['Max', 'John', 'Mark', 'Daniyel', 'Pasha']));
+
+
+
+
