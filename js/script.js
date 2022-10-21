@@ -337,11 +337,11 @@ console.log(getMiddle('preloader'));
 // array = ["кот", "тк", "кТо"];
 // array = ["кит", "кИт", "кит"]
 
-const checkWords = arr => {
+/* const checkWords = arr => {
 	let sortArr = arr.map(item => item.split('').sort().join(''));
 	let testWord = sortArr[0];
 	return sortArr.map(item => item === testWord).every(item => item);
 
-}
+} */
 
-console.log(checkWords(array));
+// console.log(checkWords(array));
